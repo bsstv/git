@@ -2,7 +2,7 @@
   <head>
     <script src="https://bsstv.github.io/0584/clpr/min.js"></script>
     <script src="https://bsstv.github.io/0584/clpr/dsh.js"></script>
-		<script type="text/javascript" src="//cdn.jsdelivr.net/gh/ewwink/clappr-quality-selector-plugin@latest/quality-selector.js"></script>
+   <script type="text/javascript" src="https://bsstv.github.io/0584/clpr/dsh.js"></script>
 
   </head>
 
@@ -12,18 +12,9 @@
       var player = new Clappr.Player(
         {
           source: 'https://linearjitp-playback.astro.com.my/dash-wv/linear/2304/default_ott.mpd',
-          plugins: [DashShakaPlayback,QualitySelector],	
-					qualitySelectorConfig: {
-    title: 'Quality',
-    labels: {
-      2: 'High', // 500kbps
-      1: 'Med', // 240kbps
-      0: 'Low', // 120kbps
-    },
-    defaultQuality: 0, // start with quality 0 or Lowest
-    labelCallback: function(playbackLevel, customLabel) {
-      return customLabel + playbackLevel.level.height + 'p'; // High 720p
-    }
+          plugins:[MediaControl.MainPlugin,MediaControl.PlayPauseButtonPlugin,MediaControl.SeekBarPlugin,MediaControl.FullscreenButtonPlugin,MediaControl.LevelSelectorPlugin,DashShakaPlayback],	
+	  shakaConfiguration:{preferredAudioLanguage:"pt-BR",streaming:{rebufferingGoal:15}},			
+ 
   },
   
   events: {
