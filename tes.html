@@ -11,7 +11,7 @@
     <script>
       var player = new Clappr.Player(
         {
-          source: 'https://d25tgymtnqzu8s.cloudfront.net/smil:tv2/manifest.mpd',
+          source: 'https://linearjitp-playback.astro.com.my/dash-wv/linear/2304/default_ott.mpd',
           plugins: [DashShakaPlayback,QualitySelector],	
 					qualitySelectorConfig: {
     title: 'Quality',
@@ -38,10 +38,8 @@
           shakaConfiguration: {
 						drm: {
                 clearKeys: {
-                    // Tambahkan kunci ClearKey Anda di sini
-                         'e509735b5f89750d42ace2410ead7210': '1726083509d570b5de4730ab9f338cc3',
-                         '27828727f0a3a0b4fbc668378ccf8c10': '958e9cb7389e20948de5a542d2729ecf',
-                         '0cb7980e9d1d8957f9a293ed96342410': '11da1ad368d0cacffe4824b6b35e22b7'
+                                'a098896d2b11c5f3906a993c3ba5c610': 'f3f842c54cc96cbbd0bcb96a4cb8a813'
+
                 }
             },
             preferredAudioLanguage: 'pt-BR',
